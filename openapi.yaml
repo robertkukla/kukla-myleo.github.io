@@ -34,6 +34,26 @@ paths:
       responses:
         '200':
           description: Order successfully created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  orderId:
+                    type: string
+                    description: ID of createted the order
+                    example: 55e44137-20a0-4c5d-a6dc-135175c67f24
+                  shipments:
+                    type: array
+                    description: ID of created shipments
+                    items:
+                      type: object
+                      description: Shipment
+                      properties:
+                        id:
+                          type: string
+                          description: Shipment id
+                          example: 55e44137-20a0-4c5d-a6dc-135175casf7f24
         '400':
           description: Bad request
           content:
