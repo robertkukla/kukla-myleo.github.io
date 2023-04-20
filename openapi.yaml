@@ -359,6 +359,11 @@ components:
           example: 55e44137-20a0-4c5d-a6dc-135175c67f24
         statusDate:
           type: string
+          format: date
+          description: Status date
+          example: 2023-04-01
+        status:
+          type: string
           description: Shipment status
           enum:
             - PLAN
